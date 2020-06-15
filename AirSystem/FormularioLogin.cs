@@ -17,9 +17,27 @@ namespace AirSystem
             InitializeComponent();
         }
 
-        private void TextBoxSenha_TextChanged(object sender, EventArgs e)
-        {
+        public static int idioma;
 
+        private void BotaoEntrar_Click(object sender, EventArgs e)
+        {
+            idioma = OpcaoIdioma.SelectedIndex;
+
+            if (OpcaoIdioma.Text.Trim().Length == 1)
+            {
+
+            }
+            else
+            {
+                TituloUsuario.Text = "User";
+                TituloSenha.Text = "Password";
+                TituloIdioma.Text = "Language";
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label1.Text = DateTime.Now.ToString("HH:mm:ss:fff");
         }
     }
 }

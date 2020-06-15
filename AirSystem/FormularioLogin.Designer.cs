@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.TituloUsuario = new System.Windows.Forms.Label();
             this.TextBoxUsuario = new System.Windows.Forms.TextBox();
             this.BotaoNovoUsuario = new System.Windows.Forms.Button();
@@ -37,7 +38,8 @@
             this.OpcaoIdioma = new System.Windows.Forms.ComboBox();
             this.BotaoEntrar = new System.Windows.Forms.Button();
             this.BotaoSair = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.RelogioDigital = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // TituloUsuario
@@ -84,7 +86,6 @@
             this.TextBoxSenha.PasswordChar = '*';
             this.TextBoxSenha.Size = new System.Drawing.Size(210, 20);
             this.TextBoxSenha.TabIndex = 4;
-            this.TextBoxSenha.TextChanged += new System.EventHandler(this.TextBoxSenha_TextChanged);
             // 
             // TituloIdioma
             // 
@@ -116,6 +117,7 @@
             this.BotaoEntrar.TabIndex = 7;
             this.BotaoEntrar.Text = "Entrar";
             this.BotaoEntrar.UseVisualStyleBackColor = true;
+            this.BotaoEntrar.Click += new System.EventHandler(this.BotaoEntrar_Click);
             // 
             // BotaoSair
             // 
@@ -127,20 +129,26 @@
             this.BotaoSair.Text = "Sair";
             this.BotaoSair.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // RelogioDigital
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker1.Location = new System.Drawing.Point(360, 330);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(65, 20);
-            this.dateTimePicker1.TabIndex = 9;
+            this.RelogioDigital.Enabled = true;
+            this.RelogioDigital.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "label1";
             // 
             // TelaLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.BotaoSair);
             this.Controls.Add(this.BotaoEntrar);
             this.Controls.Add(this.OpcaoIdioma);
@@ -168,7 +176,8 @@
         private System.Windows.Forms.ComboBox OpcaoIdioma;
         private System.Windows.Forms.Button BotaoEntrar;
         private System.Windows.Forms.Button BotaoSair;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Timer RelogioDigital;
+        private System.Windows.Forms.Label label1;
     }
 }
 
