@@ -19,3 +19,6 @@ C:\Programação\ProjetoAirSystem\AirSystem\AirSystem\obj\Debug\AirSystem.csproj
 C:\Programação\ProjetoAirSystem\AirSystem\AirSystem\obj\Debug\AirSystem.csproj.CoreCompileInputs.cache
 C:\Programação\ProjetoAirSystem\AirSystem\AirSystem\obj\Debug\AirSystem.exe
 C:\Programação\ProjetoAirSystem\AirSystem\AirSystem\obj\Debug\AirSystem.pdb
+C:\Programação\ProjetoAirSystem\AirSystem\AirSystem\obj\Debug\AirSystem.FormularioAdmin.resources
+C:\Programação\ProjetoAirSystem\AirSystem\AirSystem\obj\Debug\AirSystem.FormularioListarUsuarios.resources
+C:\Programação\ProjetoAirSystem\AirSystem\AirSystem\obj\Debug\AirSystem.FormularioUsuario.resources
