@@ -68,6 +68,7 @@
             this.BotaoNovoUsuario.TabIndex = 2;
             this.BotaoNovoUsuario.Text = "Novo Usuário";
             this.BotaoNovoUsuario.UseVisualStyleBackColor = true;
+            this.BotaoNovoUsuario.Click += new System.EventHandler(this.BotaoNovoUsuario_Click);
             // 
             // TituloSenha
             // 

@@ -26,5 +26,10 @@ namespace AirSystem
         {
 
         }
+
+        private void BotaoVoltar_Click(object sender, EventArgs e)
+        {
+            new FormularioAdmin().ShowDialog();
+        }
     }
 }

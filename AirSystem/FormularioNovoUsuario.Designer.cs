@@ -41,13 +41,13 @@
             this.TextBoxNome = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.TextBoxSobrenome = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.FotoPictureBox = new System.Windows.Forms.PictureBox();
             this.TextBoxNumero = new System.Windows.Forms.TextBox();
             this.BotaoAlterarFoto = new System.Windows.Forms.Button();
             this.BotaoDeletarFoto = new System.Windows.Forms.Button();
             this.EscolhaAdmin = new System.Windows.Forms.CheckBox();
             this.BotaoCadastrar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FotoPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // Nome
@@ -117,6 +117,8 @@
             this.TextBoxConfirmarSenha.PasswordChar = '*';
             this.TextBoxConfirmarSenha.Size = new System.Drawing.Size(169, 20);
             this.TextBoxConfirmarSenha.TabIndex = 6;
+            this.TextBoxConfirmarSenha.Enter += new System.EventHandler(this.Input_Enter);
+            this.TextBoxConfirmarSenha.Leave += new System.EventHandler(this.Input_Leave);
             // 
             // TextBoxSenha
             // 
@@ -125,6 +127,8 @@
             this.TextBoxSenha.PasswordChar = '*';
             this.TextBoxSenha.Size = new System.Drawing.Size(169, 20);
             this.TextBoxSenha.TabIndex = 7;
+            this.TextBoxSenha.Enter += new System.EventHandler(this.Input_Enter);
+            this.TextBoxSenha.Leave += new System.EventHandler(this.Input_Leave);
             // 
             // TextBoxUsuario
             // 
@@ -132,6 +136,8 @@
             this.TextBoxUsuario.Name = "TextBoxUsuario";
             this.TextBoxUsuario.Size = new System.Drawing.Size(169, 20);
             this.TextBoxUsuario.TabIndex = 8;
+            this.TextBoxUsuario.Enter += new System.EventHandler(this.Input_Enter);
+            this.TextBoxUsuario.Leave += new System.EventHandler(this.Input_Leave);
             // 
             // TextBoxEndereco
             // 
@@ -139,6 +145,8 @@
             this.TextBoxEndereco.Name = "TextBoxEndereco";
             this.TextBoxEndereco.Size = new System.Drawing.Size(202, 20);
             this.TextBoxEndereco.TabIndex = 10;
+            this.TextBoxEndereco.Enter += new System.EventHandler(this.Input_Enter);
+            this.TextBoxEndereco.Leave += new System.EventHandler(this.Input_Leave);
             // 
             // TextBoxNome
             // 
@@ -146,7 +154,8 @@
             this.TextBoxNome.Name = "TextBoxNome";
             this.TextBoxNome.Size = new System.Drawing.Size(93, 20);
             this.TextBoxNome.TabIndex = 11;
-            this.TextBoxNome.Text = "Digite seu nome";
+            this.TextBoxNome.Enter += new System.EventHandler(this.Input_Enter);
+            this.TextBoxNome.Leave += new System.EventHandler(this.Input_Leave);
             // 
             // dateTimePicker1
             // 
@@ -155,6 +164,8 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(169, 20);
             this.dateTimePicker1.TabIndex = 12;
+            this.dateTimePicker1.Enter += new System.EventHandler(this.Input_Enter);
+            this.dateTimePicker1.Leave += new System.EventHandler(this.Input_Leave);
             // 
             // TextBoxSobrenome
             // 
@@ -163,14 +174,16 @@
             this.TextBoxSobrenome.Size = new System.Drawing.Size(169, 20);
             this.TextBoxSobrenome.TabIndex = 13;
             this.TextBoxSobrenome.Text = "Digite seu sobrenome";
+            this.TextBoxSobrenome.Enter += new System.EventHandler(this.Input_Enter);
+            this.TextBoxSobrenome.Leave += new System.EventHandler(this.Input_Leave);
             // 
-            // pictureBox1
+            // FotoPictureBox
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(558, 45);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(212, 170);
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
+            this.FotoPictureBox.Location = new System.Drawing.Point(558, 45);
+            this.FotoPictureBox.Name = "FotoPictureBox";
+            this.FotoPictureBox.Size = new System.Drawing.Size(212, 170);
+            this.FotoPictureBox.TabIndex = 14;
+            this.FotoPictureBox.TabStop = false;
             // 
             // TextBoxNumero
             // 
@@ -179,6 +192,8 @@
             this.TextBoxNumero.Size = new System.Drawing.Size(54, 20);
             this.TextBoxNumero.TabIndex = 15;
             this.TextBoxNumero.Text = "Nº";
+            this.TextBoxNumero.Enter += new System.EventHandler(this.Input_Enter);
+            this.TextBoxNumero.Leave += new System.EventHandler(this.Input_Leave);
             // 
             // BotaoAlterarFoto
             // 
@@ -189,6 +204,7 @@
             this.BotaoAlterarFoto.TabIndex = 16;
             this.BotaoAlterarFoto.Text = "Alterar";
             this.BotaoAlterarFoto.UseVisualStyleBackColor = true;
+            this.BotaoAlterarFoto.Click += new System.EventHandler(this.BotaoAlterarFoto_Click);
             // 
             // BotaoDeletarFoto
             // 
@@ -219,6 +235,7 @@
             this.BotaoCadastrar.TabIndex = 19;
             this.BotaoCadastrar.Text = "Cadastrar";
             this.BotaoCadastrar.UseVisualStyleBackColor = true;
+            this.BotaoCadastrar.Click += new System.EventHandler(this.BotaoCadastrar_Click);
             // 
             // FormularioNovoUsuario
             // 
@@ -230,7 +247,7 @@
             this.Controls.Add(this.BotaoDeletarFoto);
             this.Controls.Add(this.BotaoAlterarFoto);
             this.Controls.Add(this.TextBoxNumero);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.FotoPictureBox);
             this.Controls.Add(this.TextBoxSobrenome);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.TextBoxNome);
@@ -246,7 +263,8 @@
             this.Controls.Add(this.Nome);
             this.Name = "FormularioNovoUsuario";
             this.Text = "Novo usuário - AirSystem";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Load += new System.EventHandler(this.FormularioNovoUsuario_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.FotoPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -267,7 +285,7 @@
         private System.Windows.Forms.TextBox TextBoxNome;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.TextBox TextBoxSobrenome;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox FotoPictureBox;
         private System.Windows.Forms.TextBox TextBoxNumero;
         private System.Windows.Forms.Button BotaoAlterarFoto;
         private System.Windows.Forms.Button BotaoDeletarFoto;

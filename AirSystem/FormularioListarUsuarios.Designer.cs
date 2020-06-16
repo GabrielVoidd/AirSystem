@@ -270,6 +270,7 @@
             this.BotaoVoltar.TabIndex = 24;
             this.BotaoVoltar.Text = "Voltar";
             this.BotaoVoltar.UseVisualStyleBackColor = true;
+            this.BotaoVoltar.Click += new System.EventHandler(this.BotaoVoltar_Click);
             // 
             // BotaoEditar
             // 

@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CampoVazio.cs" />
     <Compile Include="FormularioAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +79,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Usuario.cs" />
+    <Compile Include="UsuarioRepository.cs" />
     <EmbeddedResource Include="FormularioAdmin.resx">
       <DependentUpon>FormularioAdmin.cs</DependentUpon>
     </EmbeddedResource>
